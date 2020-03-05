@@ -1,0 +1,432 @@
+$dark-bg: #111;
+$light-bg: #f5f5f5;
+$primary-color: #00a34f;
+$secondary-color: #005927;
+
+$header-height: 60px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $light-bg;
+  color: $dark-bg;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.scroll-top {
+  background: $dark-bg;
+  border-radius: 100px;
+  color: $light-bg;
+  opacity: 0;
+  padding: 10px 15px;
+
+  transition: opacity ease-in .2s;
+
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  z-index: 1001;
+}
+
+.scroll-top.show {
+  opacity: 0.9;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 960px;
+  overflow: hidden;
+}
+
+#banner, #testimonials, #process, #contact, footer {
+  .container {
+    padding-top: 10px;
+  }
+}
+
+.peep { 
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+ .hide-element {
+  border: 0;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.highlighter {
+  color: $primary-color;
+}
+
+.btn {
+  background: $primary-color;
+  border: 1px solid $primary-color;
+  border-radius: 50px;
+  color: $light-bg;
+  padding: 5px 10px;
+  &:hover {
+    background: $dark-bg;
+  }
+  &-second {
+    background: transparent;
+  }
+  i {
+    padding-left: 5px;
+  }
+}
+
+// slider images
+.glide__slide img {
+  width: 100%;
+  height: auto;
+}
+
+h2, h3 {
+  margin: 20px 10px 10px;
+  text-transform: capitalize;
+}
+
+p { margin: 0 10px 10px }
+
+header {
+  background: $dark-bg;
+  color: $light-bg;
+  position: relative;
+  .container {
+    align-items: center;
+    background: $dark-bg;
+    display: flex;
+    height: $header-height;
+    justify-content: space-between;
+    padding: 0 10px;
+    position: relative;
+    .logo {
+      h1 {
+        margin: 0;
+        padding: 0;
+        color: $primary-color;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        a {
+          color: $primary-color;
+          span {
+            color: $light-bg;
+          }
+        }
+      }
+    }
+    .menu-toggle {
+      color: $light-bg;
+      order: 3;
+      cursor: pointer;
+      i {
+        color: $light-bg;
+        cursor: pointer;
+        font-size: 1.3rem;
+      }
+    }
+    nav {
+      background: $dark-bg;
+      position: fixed;
+      right: 0;
+      top: $header-height;
+      transform: translate(100%);
+      transition: transform 0.5s ease-in-out;
+      width: 250px;
+      height: 100%;
+      z-index: 4;
+      ul {
+        li {
+          a {
+            background: $dark-bg;
+            color: $light-bg;
+            display: block;
+            padding: 15px 10px;
+            text-align: center;
+            transition: all ease-in .2s;
+            &:hover {
+              background: $primary-color;
+            }
+            i {
+              margin-left: 10px;
+              opacity: 0;
+              transition: opacity ease-in .2s;
+            }
+            &:hover i {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+    nav.show {
+      transform: translate(0);
+    }
+    .btn-row {
+      .btn {
+        margin-right: 10px;
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+
+.sticky #top {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+.overlay.show {
+  opacity: 0.8;
+}
+
+#showcase {
+  background: url('../img/86185724_2747301952018372_2593413042733580288_n.jpg') $dark-bg no-repeat center center / cover;
+  height: calc(100vh - 60px);
+  position: relative;
+  width: 100%;
+  .container {
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    .txt-row {
+      h3 {
+        color: $primary-color;
+      }
+      h2 {
+        color: $light-bg;
+        font-size: 1.9rem;
+      }
+    }
+    .btn-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .btn {
+        font-size: 1.2rem;
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+#showcase::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: inset 80px 80px 150px #000, inset -80px -80px 150px #000;
+}
+
+#gallery {
+  .container {
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 5px;
+      padding: 5px;
+      line-height: 0;
+      @media (min-width: 400px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @media (min-width: 800px) {
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+        padding: 10px;
+      }
+      div {
+        position: relative;
+        .cover {
+          background: #000;
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+  
+          background: $dark-bg;
+          color: $light-bg;
+          opacity: 0.9;
+  
+          i {
+            margin-left: 10px;
+            opacity: 0;
+            transition: opacity ease-in-out .2s;
+          }
+          &:hover i {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+#testimonials {
+  .container {
+    position: relative;
+    div {
+      blockquote {
+        line-height: 1.5;
+        padding: 40px;
+        position: relative;
+        p {
+          margin-bottom: 10px;
+        }
+        p:first-child:before {
+          content: '\201C';
+          color: $primary-color;
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          font-size: 7.5em;
+          font-weight: 700;
+          opacity: 0.3;
+          position: absolute;
+          top: -0.1em;
+          left: 0.1em;
+          z-index: -1;
+        }
+      }
+    }
+  }
+}
+
+#contact {
+  background: $primary-color;
+  .container {
+    display: flex;
+    flex-direction: column;
+    div {
+      h3 {
+        span {
+          color: $light-bg;
+        }
+      }
+      .contact-form {
+        form {
+          display: flex;
+          flex-direction: column;
+          padding: 0 10px 10px;
+          input[type=text], select, textarea {
+            border: 1px solid $dark-bg;
+            margin: .5em 0 1em;
+            padding: 1em;
+            flex-basis: 47.5%;
+          }
+          textarea {
+            @media (min-width: 800px) {
+              flex-basis: 100%;
+            }
+          }
+          input[type=submit] {
+            background-color: $dark-bg;
+            border: none;
+            border-radius: 0;
+            color: $light-bg;
+            cursor: pointer;
+            margin-bottom: .5em;
+            padding: .75em;
+            width: 100px;
+            transition: background-color ease-in-out .2s;
+            &:hover {
+              background-color: rgba($dark-bg, 0.9);
+            }
+          }
+          @media (min-width: 800px) {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+          }
+        }
+      }
+    }
+    div {
+      div {
+        ul {
+          display: flex;
+          flex-direction: column;
+          margin-left: 20px;
+          li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            i {
+              color: $light-bg;
+              margin-right: 10px;
+            }
+          }
+        }
+      }     
+    }
+  }
+}
+
+footer {
+  background: $dark-bg;
+  color: $light-bg;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  max-height: 40px;
+
+  flex: 1;
+  .container {
+    padding: 10px;
+    .copy {
+      a {
+        color: $primary-color;
+        span {
+          color: $light-bg;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .peep {
+    display: inline-block;
+  }
+}
