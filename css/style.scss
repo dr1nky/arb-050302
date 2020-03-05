@@ -336,6 +336,12 @@ header {
 
 #contact {
   background: $primary-color;
+  a {
+    color: $light-bg;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
   .container {
     display: flex;
     flex-direction: column;
