@@ -6,16 +6,14 @@ const nav = document.querySelector('#top');
 const navTop = nav.offsetTop;
 let intViewportHeight = window.innerHeight;
 
-menuToggle.addEventListener('click', (e) => {
+menuToggle.addEventListener('click', () => {
   menuToggle.classList.toggle('close')
   mainNav.classList.toggle('show')
-  e.preventDefault()
 })
 
-function removeShow(e) {
+function removeShow() {
   if(mainNav.classList.contains('show'))
     mainNav.classList.remove('show')
-    e.preventDefault()
 }
 
 window.addEventListener('scroll', removeShow)
