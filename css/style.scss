@@ -209,10 +209,6 @@ header {
   z-index: 99;
 }
 
-.overlay.show {
-  opacity: 0.8;
-}
-
 #showcase {
   background: url('../img/86185724_2747301952018372_2593413042733580288_n.jpg') $dark-bg no-repeat center center / cover;
   height: calc(100vh - 60px);
@@ -434,5 +430,16 @@ footer {
 @media (max-width: 800px) {
   .peep {
     display: inline-block;
+  }
+}
+
+@media (min-width: 800px) {
+  #showcase {
+    h2 {
+      font-size: 2.5rem !important;
+    }
+    h3 {
+      font-size: 1.5rem;
+    }
   }
 }
