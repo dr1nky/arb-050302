@@ -3,7 +3,6 @@ const mainNav = document.querySelector('.main-nav')
 const mainNavLinks = document.querySelectorAll('.main-nav ul li a')
 const scrollTop = document.querySelector('.scroll-top')
 const nav = document.querySelector('#top');
-const navTop = nav.offsetTop;
 let intViewportHeight = window.innerHeight;
 
 menuToggle.addEventListener('click', () => {
