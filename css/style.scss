@@ -94,7 +94,8 @@ ul {
   border: 1px solid $primary-color;
   border-radius: 50px;
   color: $light-bg;
-  padding: 5px 10px;
+  font-size: 0.875rem;
+  padding: 3px 7px;
   &:hover {
     background: $dark-bg;
   }
@@ -136,9 +137,9 @@ header {
         margin: 0;
         padding: 0;
         color: $primary-color;
-        font-size: 1.1rem;
+        font-size: 1.125rem;
         // letter-spacing: 1px;
-        word-spacing: -3px;
+        word-spacing: -1px;
         a {
           color: $primary-color;
           span {
