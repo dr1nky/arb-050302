@@ -106,8 +106,9 @@ header {
       margin: 0;
       padding: 0;
       color: #00a34f;
-      font-size: 1.2rem;
-      letter-spacing: 1px; }
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+      word-spacing: -3px; }
       header .container .logo h1 a {
         color: #00a34f; }
         header .container .logo h1 a span {
