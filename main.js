@@ -40,7 +40,6 @@ function showScrollTop() {
 
 window.addEventListener('scroll', showScrollTop)
 
-
 // GlideJs Slides
 new Glide('.glide').mount()
 
