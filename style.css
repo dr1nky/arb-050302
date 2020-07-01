@@ -198,3 +198,7 @@ footer {
       top: -0.1em;
       left: 0.1em;
       z-index: -1; }
+
+@media (max-width: 768px) {
+  .logo {
+    width: 100px; } }
