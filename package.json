@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "watch": "node-sass  --watch css/style.scss style.css",
-    "fresh": "node-sass  --watch css/fresh.scss fresh.css",
     "prefix": "postcss --use autoprefixer -b \"last 5 versions\" style.css -o css/style.prefix.css",
     "compress": "node-sass css/style.prefix.css style.css --output-style compressed"
   },

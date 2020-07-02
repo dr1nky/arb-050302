@@ -113,6 +113,8 @@ form {
   display: flex;
   flex-direction: column;
   padding: 14px; }
+  form input[type=text], form input[type=textarea] {
+    appearance: none; }
   form input, form textarea {
     border: 1px solid #b9b8b8;
     font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif;

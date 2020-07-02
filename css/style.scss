@@ -170,6 +170,9 @@ form {
   display: flex;
   flex-direction: column;
   padding: 14px;
+  input[type=text], input[type=textarea] {
+    appearance: none;
+  }
   input, textarea {
     border: 1px solid $mid-0;
     font-family: $font-family-primary;
