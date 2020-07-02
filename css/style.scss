@@ -536,6 +536,7 @@ footer {
 #testimonials {
   .container {
     position: relative;
+    max-width: 900px !important;
     div {
       blockquote {
         font-size: 1rem;
@@ -544,7 +545,7 @@ footer {
         position: relative;
         p {
           margin-bottom: 14px;
-          columns: 0px 1;
+          // columns: 0px 1;
         }
         p:first-child:before {
           content: '\201C';
