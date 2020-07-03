@@ -188,7 +188,6 @@ footer {
   position: relative;
   max-width: 900px !important; }
   #testimonials .container div blockquote {
-    font-size: 1rem;
     line-height: 1.5;
     padding: 40px;
     position: relative; }
@@ -207,9 +206,14 @@ footer {
       z-index: -1; }
 
 @media (max-width: 768px) {
+  body {
+    font-size: 14px;
+    line-height: 1.6; }
   header ul li {
     font-size: 0.9rem; }
   .logo {
     width: 100px; }
   .heading {
-    font-size: 2rem; } }
+    font-size: 1.5rem; }
+  h2 {
+    font-size: 1.25rem; } }
