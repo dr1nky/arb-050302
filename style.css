@@ -108,6 +108,11 @@ header {
             transform-origin: left; }
         header .container ul li.active a {
           color: #16c76e; }
+        header .container ul li.pop a {
+          background: #16c76e;
+          color: #f4f4f4;
+          padding-left: 5px;
+          padding-right: 5px; }
 
 form {
   display: flex;
@@ -202,5 +207,9 @@ footer {
       z-index: -1; }
 
 @media (max-width: 768px) {
+  header ul li {
+    font-size: 0.9rem; }
   .logo {
-    width: 100px; } }
+    width: 100px; }
+  .heading {
+    font-size: 2rem; } }
