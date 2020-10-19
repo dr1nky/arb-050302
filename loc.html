@@ -12,8 +12,8 @@
 <script>
 if('geolocation' in navigator) {
 	navigator.geolocation.watchPosition((pos) => {
-		console.log(pos);
-		const lat = pos.coords.latitude;
+	console.log(pos);
+	const lat = pos.coords.latitude;
         const lon = pos.coords.longitude;
         const time = pos.timestamp;
 
