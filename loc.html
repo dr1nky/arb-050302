@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Location</title>
+  	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+	<!-- Make sure you put this AFTER Leaflet's CSS -->
+	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+</head>
+<body>
+<div style="height: 100vh;" id="mapid"></div>
+<script>
+if('geolocation' in navigator) {
+	navigator.geolocation.watchPosition((pos) => {
+		console.log(pos);
+		const lat = pos.coords.latitude;
+        const lon = pos.coords.longitude;
+        const time = pos.timestamp;
+
+        // leaflet
+        var mymap = L.map('mapid').setView([lat, lon], 15);
+        const attribution = 'Open Street Map';
+
+        const tileUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+        const tiles = L.tileLayer(tileUrl, {attribution});
+        tiles.addTo(mymap);
+
+        var marker = L.marker([lat, lon]).addTo(mymap);
+        const txt = `You are here`;
+
+        marker.bindPopup(txt);
+	});
+} else {
+	console.log('location not available');
+}
+</script>
+</body>
+</html>
