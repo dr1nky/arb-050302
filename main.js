@@ -58,7 +58,7 @@ const lon = -2.534168895042527;
 var mymap = L.map('mapid').setView([lat, lon], 15);
 const attribution = 'Open Street Map';
 
-const tileUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 const tiles = L.tileLayer(tileUrl, {attribution});
 tiles.addTo(mymap);
 
