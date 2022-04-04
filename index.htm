@@ -16,6 +16,7 @@
   <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/png">
   <title>Bespoke Illuminated Signs</title>
   <meta name="description" content="Bespoke illuminated sign makers, Cheshire UK">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.min.css">
@@ -129,9 +130,10 @@
             </li>
           </ul>
         </div>
-        <div aria-hidden="true" class="glide__bullets" data-glide-el="controls[nav]">
-          <button class="glide__bullet" data-glide-dir="=0"><span class="hide-element">0</span></button>
-          <button class="glide__bullet" data-glide-dir="=1"><span class="hide-element">1</span></button>
+        <div style="bottom: 0.5em" aria-hidden="true" class="glide__bullets" data-glide-el="controls[nav]">
+          <button style="height: 23px; width: 23px; margin: 0.5em" class="glide__bullet" data-glide-dir="=0"><span class="hide-element">0</span></button>
+          <button style="height: 23px; width: 23px; margin: 0.5em" class="glide__bullet" data-glide-dir="=1"><span class="hide-element">1</span></button>
+          <button style="height: 23px; width: 23px; margin: 0.5em" class="glide__bullet" data-glide-dir="=2"><span class="hide-element">2</span></button>
         </div>
       </div>
     </div>
@@ -155,6 +157,7 @@
           </li>
         </ul>
       </div>
+      <div style="height: 250px;" id="mapid"></div>
       <div>
         <h2>Send a message</h2>
         <form name="contact" method="POST" data-netlify="true">
@@ -184,6 +187,7 @@
     <div>Copyright &copy; 2019-2022</div>
   </footer>
 
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.0/baguetteBox.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
   <script src="main.js"></script>
